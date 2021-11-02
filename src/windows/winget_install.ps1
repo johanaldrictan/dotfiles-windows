@@ -4,8 +4,10 @@ Write-Host "Installing common..." -ForegroundColor Green
 Write-Host "------------------------------------" -ForegroundColor Green
 $apps = @(
     "Google.Chrome",
-    "Telegram.TelegramDesktop",
-    "Foxit.FoxitReader")
+    "Mozilla.Firefox",
+    "Typora.Typora",
+    "Discord.Discord",
+    "WinSCP.WinSCP")
 foreach ($app in $apps) {
     winget install $app --silent
 }
@@ -16,7 +18,11 @@ $dev_apps = @(
     "Docker.DockerDesktopEdge",
     "Microsoft.WindowsTerminal",
     "Microsoft.VisualStudioCode",
-    "Microsoft.VisualStudioCodeInsiders")
+    "Microsoft.VisualStudioCodeInsiders",
+    "Microsoft.VisualStudio.Community",
+    "JetBrains.IntelliJIDEA.Community",
+    "Atlassian.Sourcetree",
+    "PuTTY.PuTTY")
 foreach ($app in $dev_apps) {
     winget install $app --silent
 }
@@ -27,7 +33,8 @@ $runtimes = @(
     "Microsoft.dotNetFramework",
     "Microsoft.dotnetRuntime",
     "OpenJS.NodeJS",
-    "Python.Python")
+    "Python.Python",
+    "UnityTechnologies.UnityHub")
 foreach ($app in $runtimes) {
     winget install $app --silent
 }

@@ -36,6 +36,25 @@ print_in_purple "\n   zip\n\n"
 install_package "zip" "zip"
 install_package "zip" "unzip"
 
+print_in_purple "\n   gcc\n\n"
+install_package "gcc" "gcc"
+
+print_in_purple "\n   make\n\n"
+install_package "make" "make"
+
+print_in_purple "\n   cmake\n\n"
+install_package "cmake" "cmake"
+
+print_in_purple "\n   g++\n\n"
+install_package "g++" "g++"
+
+print_in_purple "\n   boost\n\n"
+install_package "libboost-dev" "libboost-dev"
+install_package "libboost-all-dev" "libboost-all-dev"
+
+print_in_purple "\n   c++ libs\n\n"
+install_package "libudev-dev" "libudev-dev"
+install_package "libsystemd-dev" "libsystemd-dev"
 
 print_in_purple "\n   python\n\n"
 install_package "python" "python"
@@ -52,6 +71,9 @@ install_package "python-pip" "python-pip -y"
 
 print_in_purple "\n   vim\n\n"
 install_package "vim" "vim-gnome -y"
+
+print_in_purple "\n   vim\n\n"
+install_package "nano" "nano"
 
 print_in_purple "\n   tmux\n\n"
 install_package "tmux" "tmux"
@@ -85,14 +107,6 @@ if [[ $? -ne 0 ]]; then
     install_npm_package "yo" "yo"
 else
     execute "" "yo (already installed)"
-fi
-
-print_in_purple "\n   jira-cmd\n\n"
-sudo npm ls -g yo > /dev/null
-if [[ $? -ne 0 ]]; then
-    install_npm_package "jira-cmd" "jira-cmd"
-else
-    execute "" "jira-cmd (already installed)"
 fi
 
 # Ruby
